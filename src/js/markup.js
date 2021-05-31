@@ -1,7 +1,7 @@
 import countriesTemplate from '../templates/countriesTemplate.hbs';
 import countryTemplate from '../templates/countryTemplate.hbs';
 import getRefs from './get-refs';
-import errorMessage from './error';
+import notify from './error';
 export default { renderMarkup, clearMarkup };
 
 const refs = getRefs();
@@ -10,6 +10,7 @@ function renderMarkup(data) {
   console.log(data);
   const { length } = data;
   if (length === 1) {
+    notify.successMessage(`Yes! You found this country!`);
     countryMarkup(data);
     return;
   }
@@ -21,7 +22,7 @@ function renderMarkup(data) {
 
   if (length > 10) {
     clearMarkup();
-    errorMessage('Too many matches found. Please enter a more specific query!');
+    notify.errorMessage('Too many matches found. Please enter a more specific query!');
     return;
   }
 }

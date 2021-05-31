@@ -2,7 +2,7 @@ import API from './fetchCountries';
 import getRefs from './get-refs';
 import markup from './markup';
 
-import errorMessage from './error';
+import notify from './error';
 
 const refs = getRefs();
 const debounce = require('lodash.debounce');
@@ -21,6 +21,6 @@ function onInput(elem) {
   API.fetchCountries(searchQuery)
     .then(markup.renderMarkup)
     .catch(data => {
-      errorMessage(`${searchQuery} - wrong query. Please try again!`);
+      notify.errorMessage(`${searchQuery} - wrong query. Please try again!`);
     });
 }
