@@ -11,7 +11,7 @@ refs.searchInput.addEventListener('input', debounce(onInput, 1000));
 
 function onInput(elem) {
   elem.preventDefault();
-  const searchQuery = elem.target.value;
+  const searchQuery = elem.target.value.trim();
 
   if (!searchQuery) {
     markup.clearMarkup();
