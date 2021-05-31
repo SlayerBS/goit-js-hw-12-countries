@@ -1,0 +1,54 @@
+body {
+  padding-top: 30px;
+
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+
+  background-image: url('../images/bg.jpg');
+}
+
+.country-input {
+  padding: 5px;
+  font-size: 20px;
+
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.pnotify {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.countries-list {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.countries-list-item {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.country-card {
+  display: flex;
+  justify-content: center;
+}
+
+.country-card-content {
+  margin-right: 50px;
+
+  text-align: left;
+
+  font-size: 20px;
+}
+
+.country-card-lng {
+  padding: 0;
+}
+
+.country-card-lng li {
+  margin-left: 20px;
+}
